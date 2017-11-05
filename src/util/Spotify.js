@@ -1,5 +1,4 @@
 const clientId = '51a9cba9b37b4c66b455972237397fa2';
-//const secret = 'b82b256d8f5247728a0835633826b121';
 const redirectURI = 'https://onasjammming.surge.sh/';
 let accessToken;
 let expiresIn;

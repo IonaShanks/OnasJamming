@@ -1,5 +1,6 @@
 const clientId = '51a9cba9b37b4c66b455972237397fa2';
-const redirectURI = 'https://onasjammming.surge.sh/';
+//const redirectURI = 'https://onasjammming.surge.sh/';
+const redirectURI = 'http://localhost:3000/';
 let accessToken;
 let expiresIn;
 
@@ -43,7 +44,8 @@ const spotify = {
               name: track.name,
               artist: track.artists[0].name,
               album: track.album.name,
-              uri: track.uri
+              uri: track.uri,
+              preview_url: track.preview_url
           }))
         })
   },

@@ -69,6 +69,26 @@ class App extends React.Component {
         });
   }
 
+  playTrack(){
+
+    let audio = this.track.preview_url;
+            //if (audio.paused) {
+                audio.play();
+
+            //}else{
+              //  audio.pause();
+              //  audio.currentTime = 0
+
+          //  }
+
+
+    //return <audio src= {this.track.preview_url} autoPlay>
+    //Preview
+  //</audio>
+
+
+  }
+
 
   render() {
     return (
@@ -77,13 +97,14 @@ class App extends React.Component {
         <div className="App">
           <SearchBar onSearch = {this.search} />
           <div className="App-playlist">
-            <SearchResults searchResults = {this.state.searchResults} onAdd={this.addTrack} />
+            <SearchResults searchResults = {this.state.searchResults} onAdd={this.addTrack} onPlay = {this.playTrack}/>
             <Playlist
               playlistName={this.state.playlistName}
               playlistTracks={this.state.playlistTracks}
               onRemove={this.removeTrack}
               onNameChange={this.updatePlaylistName}
               onSave={ this.savePlaylist }
+
             />
           </div>
         </div>
